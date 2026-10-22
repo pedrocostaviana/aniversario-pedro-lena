@@ -80,3 +80,29 @@ footer span { color: var(--accent); padding-left: 5px; }
   background: #f4511e !important;
   color: #06182b !important;
 }
+/* Correção definitiva de contraste */
+.event-details .detail,
+.event-details .detail * {
+  color: #ffffff !important;
+}
+
+.event-details .detail {
+  background: #0b2238 !important;
+  border-color: #f4511e !important;
+}
+
+.event-details .detail-label,
+.event-details .detail-sub {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.event-details .detail-value {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.event-details .detail-icon {
+  background: #f4511e !important;
+  color: #06182b !important;
+}
