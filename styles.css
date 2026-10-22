@@ -59,3 +59,34 @@ footer span { color: var(--accent); padding-left: 5px; }
   .detail { padding: 17px; }
   .top-label { font-size: 9px; letter-spacing: .15em; }
 }
+.detail-label,
+.detail-sub {
+  color: #d9b995;
+}
+
+.detail-value {
+  color: #fff1dc;
+}
+
+.rsvp-card {
+  background: #102b42;
+  color: #f1d7b5;
+}
+
+.rsvp-card label,
+.rsvp-card p,
+.rsvp-card .intro {
+  color: #f1d7b5;
+}
+
+input,
+select,
+textarea {
+  background: #fffaf2;
+  color: #172536;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #62584e;
+}
