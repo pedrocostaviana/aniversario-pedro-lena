@@ -125,3 +125,41 @@ const segundosEl = document.getElementById("count-seconds");
   atualizarContagem();
   setInterval(atualizarContagem, 1000);
 })();
+/* ===== ANIMACAO DE ENTRADA DAS SECOES ===== */
+(function animarElementosAoRolar() {
+  const seletores = [
+    ".countdown-section",
+    ".extras-section .card-heading",
+    ".extras-buttons",
+    ".manual-card",
+    ".event-details",
+    ".rsvp-card"
+  ];
+
+  const elementos = document.querySelectorAll(seletores.join(","));
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    elementos.forEach((elemento) => elemento.classList.add("visivel"));
+    return;
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    elementos.forEach((elemento) => elemento.classList.add("visivel"));
+    return;
+  }
+
+  elementos.forEach((elemento) => elemento.classList.add("animar-entrada"));
+
+  const observador = new IntersectionObserver((entradas, observer) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add("visivel");
+        observer.unobserve(entrada.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  elementos.forEach((elemento) => observador.observe(elemento));
+})();
