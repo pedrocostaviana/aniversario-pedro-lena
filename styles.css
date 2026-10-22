@@ -602,10 +602,10 @@ footer span { color: var(--accent); padding-left: 5px; }
     animation: none;
   }
 }
-/* ===== ICONES MARINHOS NAS LATERAIS ===== */
+/* ===== ICONES MARINHOS DISCRETOS NAS LATERAIS ===== */
 
 .ocean-decor {
-  position: fixed;
+  position: absolute;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
@@ -614,71 +614,60 @@ footer span { color: var(--accent); padding-left: 5px; }
 
 .sea-icon {
   position: absolute;
-  width: 68px;
-  height: 68px;
-  opacity: 0.24;
+  width: 42px;
+  height: 42px;
+  opacity: 0.16;
   color: var(--ink);
-  filter: drop-shadow(0 0 5px rgba(65, 183, 218, 0.16));
 }
 
 .shell-left {
-  top: 18%;
-  left: 2%;
+  top: 420px;
+  left: 8px;
   color: var(--accent);
   transform: rotate(-15deg);
 }
 
 .coral-right {
-  top: 38%;
-  right: 2%;
+  top: 850px;
+  right: 8px;
   color: var(--accent);
 }
 
 .wave-left {
-  top: 59%;
-  left: 1%;
+  top: 1280px;
+  left: 5px;
   color: #55c4df;
-  width: 76px;
+  width: 46px;
 }
 
 .sun-right {
-  top: 75%;
-  right: 2%;
+  top: 1710px;
+  right: 8px;
 }
 
 .shell-right {
-  top: 88%;
-  left: 3%;
+  top: 2150px;
+  left: 8px;
   color: var(--accent);
   transform: rotate(-12deg);
 }
 
 @media (max-width: 600px) {
   .sea-icon {
-    width: 34px;
-    height: 34px;
-    opacity: 0.20;
+    width: 25px;
+    height: 25px;
+    opacity: 0.15;
   }
 
-  .shell-left {
-    left: 2px;
-  }
-
-  .coral-right {
-    right: 2px;
-  }
-
-  .wave-left {
-    left: 1px;
-    width: 38px;
-  }
-
-  .sun-right {
-    right: 2px;
-  }
-
+  .shell-left,
+  .wave-left,
   .shell-right {
-    left: 2px;
+    left: 4px;
+  }
+
+  .coral-right,
+  .sun-right {
+    right: 4px;
   }
 }
 
