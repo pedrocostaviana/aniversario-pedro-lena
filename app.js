@@ -63,3 +63,40 @@ if (!firebaseConfigured()) {
     }
   });
 }
+/* ===== CONTAGEM REGRESSIVA DO ANIVERSÁRIO ===== */
+(function iniciarContagemRegressiva() {
+  const dataFesta = new Date("2026-11-21T17:00:00-03:00").getTime();
+
+  const diasEl = document.getElementById("count-days");
+  const horasEl = document.getElementById("count-hours");
+  const minutosEl = document.getElementById("count-minutes");
+  const segundosEl = document.getElementById("count-seconds");
+
+  if (!diasEl || !horasEl || !minutosEl || !segundosEl) return;
+
+  function atualizarContagem() {
+    const agora = Date.now();
+    const diferenca = dataFesta - agora;
+
+    if (diferenca <= 0) {
+      diasEl.textContent = "00";
+      horasEl.textContent = "00";
+      minutosEl.textContent = "00";
+      segundosEl.textContent = "00";
+      return;
+    }
+
+    const dias = Math.floor(diferenca / 86400000);
+    const horas = Math.floor((diferenca % 86400000) / 3600000);
+    const minutos = Math.floor((diferenca % 3600000) / 60000);
+    const segundos = Math.floor((diferenca % 60000) / 1000);
+
+    diasEl.textContent = String(dias).padStart(2, "0");
+    horasEl.textContent = String(horas).padStart(2, "0");
+    minutosEl.textContent = String(minutos).padStart(2, "0");
+    segundosEl.textContent = String(segundos).padStart(2, "0");
+  }
+
+  atualizarContagem();
+  setInterval(atualizarContagem, 1000);
+})();
