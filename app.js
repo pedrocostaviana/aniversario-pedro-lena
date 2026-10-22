@@ -67,10 +67,10 @@ if (!firebaseConfigured()) {
 (function iniciarContagemRegressiva() {
   const dataFesta = new Date("2026-11-21T17:00:00-03:00").getTime();
 
-  const diasEl = document.getElementById("count-days");
-  const horasEl = document.getElementById("count-hours");
-  const minutosEl = document.getElementById("count-minutes");
-  const segundosEl = document.getElementById("count-seconds");
+const diasEl = document.getElementById("count-days");
+const horasEl = document.getElementById("count-hours");
+const minutosEl = document.getElementById("count-minutes");
+const segundosEl = document.getElementById("count-seconds");
 
   if (!diasEl || !horasEl || !minutosEl || !segundosEl) return;
 
