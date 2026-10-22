@@ -96,6 +96,31 @@ const segundosEl = document.getElementById("count-seconds");
     minutosEl.textContent = String(minutos).padStart(2, "0");
     segundosEl.textContent = String(segundos).padStart(2, "0");
   }
+  /* ===== PARTICULAS DE BRASA ===== */
+(function criarBrasas() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const quantidade = window.innerWidth <= 600 ? 8 : 14;
+  const estilo = document.createElement("style");
+  estilo.textContent = `
+    .brasa {
+      left: var(--brasa-x);
+      animation-delay: var(--brasa-atraso);
+    }
+  `;
+  document.head.appendChild(estilo);
+
+  for (let i = 0; i < quantidade; i++) {
+    const particula = document.createElement("span");
+    particula.className = "brasa";
+    particula.setAttribute("aria-hidden", "true");
+
+    particula.style.setProperty("--brasa-x", `${Math.random() * 100}%`);
+    particula.style.setProperty("--brasa-atraso", `${Math.random() * -12}s`);
+
+    document.body.appendChild(particula);
+  }
+})();
 
   atualizarContagem();
   setInterval(atualizarContagem, 1000);
