@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /rsvps/{rsvpId} {
+      // Convite público: qualquer pessoa pode enviar uma nova resposta válida.
+      // Leitura, edição e exclusão só podem ocorrer por uma conta autenticada.
+      // Desative o cadastro público de usuários no Firebase Authentication e
+      // crie somente a conta administrativa dos anfitriões.
+      allow create: if
+        request.resource.data.keys().hasAll(['name', 'attendance', 'createdAt']) &&
+        request.resource.data.keys().hasOnly(['name', 'attendance', 'createdAt']) &&
+        request.resource.data.name is string &&
+        request.resource.data.name.size() >= 2 &&
+        request.resource.data.name.size() <= 100 &&
+        request.resource.data.attendance in ['yes', 'no'] &&
+        request.resource.data.createdAt == request.time;
+      allow read: if request.auth != null;
+      allow update, delete: if request.auth != null;
+    }
+  }
+}

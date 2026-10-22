@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Aniversário Pedro Leonardo & Lena Thais</title>
+  <meta name="description" content="Confirme sua presença no aniversário de Pedro Leonardo & Lena Thais.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="invite-shell">
+    <div class="top-label"><span class="tiny-star">✦</span> UM CONVITE ESPECIAL <span class="tiny-star">✦</span></div>
+    <section class="hero">
+      <div class="eyebrow">CELEBRAR A VIDA É MELHOR COM VOCÊ</div>
+      <h1>Aniversário</h1>
+      <div class="names">Pedro Leonardo <span>&amp;</span><br class="mobile-break"> Lena Thais</div>
+      <div class="ornament"><span></span><i>✦</i><span></span></div>
+      <p class="intro">Estamos preparando um momento especial e queremos compartilhar essa alegria com você.</p>
+    </section>
+
+    <section class="event-details" aria-label="Informações da festa">
+      <div class="detail">
+        <div class="detail-icon" aria-hidden="true">◷</div>
+        <div><div class="detail-label">DATA E HORÁRIO</div><div class="detail-value">21 de novembro de 2026</div><div class="detail-sub">Às 17h</div></div>
+      </div>
+      <div class="detail">
+        <div class="detail-icon" aria-hidden="true">⌖</div>
+        <div><div class="detail-label">LOCAL</div><div class="detail-value">Nossa Casa Eventos</div><div class="detail-sub">Castanhal – PA</div></div>
+      </div>
+    </section>
+
+    <section class="rsvp-card" id="confirmar">
+      <div class="card-heading">
+        <div class="eyebrow">VAMOS CONTAR COM VOCÊ?</div>
+        <h2>Confirme sua presença</h2>
+        <p>Preencha os dados abaixo. Cada confirmação corresponde a uma pessoa.</p>
+      </div>
+
+      <form id="rsvp-form">
+        <label for="guest-name">Seu nome completo</label>
+        <input id="guest-name" name="name" type="text" autocomplete="name" maxlength="100" placeholder="Digite seu nome" required>
+        <fieldset class="attendance-field">
+          <legend>Você vai comparecer?</legend>
+          <label class="choice"><input type="radio" name="attendance" value="yes" required><span>Sim, estarei lá!</span></label>
+          <label class="choice"><input type="radio" name="attendance" value="no" required><span>Infelizmente, não poderei ir</span></label>
+        </fieldset>
+        <button class="primary-button" type="submit" id="submit-button">Enviar confirmação <span aria-hidden="true">→</span></button>
+        <p class="form-note">Suas informações serão usadas somente para organizar a lista da comemoração.</p>
+        <div id="form-message" class="message" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+    <footer>Com carinho, Pedro Leonardo &amp; Lena Thais <span>✦</span></footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Painel privado | Aniversário Pedro & Lena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <a class="back-link" href="./">← Ver convite público</a>
+    <header class="admin-header">
+      <div class="eyebrow">ÁREA RESTRITA</div>
+      <h1>Painel de confirmações</h1>
+      <p>Pedro Leonardo &amp; Lena Thais · 21/11/2026</p>
+    </header>
+
+    <section class="rsvp-card" id="login-panel">
+      <div class="card-heading">
+        <h2>Acesso administrativo</h2>
+        <p>Entre com o e-mail e a senha da conta administrativa criada no Firebase.</p>
+      </div>
+      <form id="login-form">
+        <label for="admin-email">E-mail</label>
+        <input id="admin-email" type="email" autocomplete="username" required>
+        <label for="admin-password" class="second-label">Senha</label>
+        <input id="admin-password" type="password" autocomplete="current-password" required>
+        <button class="primary-button admin-submit" type="submit" id="login-button">Entrar no painel</button>
+        <div id="login-message" class="message" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section id="dashboard" hidden>
+      <div class="dashboard-top">
+        <div><h2>Resumo da festa</h2><p id="last-updated">Carregando confirmações...</p></div>
+        <button id="logout-button" class="secondary-button">Sair</button>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card"><span>Confirmaram presença</span><strong id="yes-count">—</strong></article>
+        <article class="stat-card"><span>Não poderão ir</span><strong id="no-count">—</strong></article>
+        <article class="stat-card"><span>Total de respostas</span><strong id="total-count">—</strong></article>
+      </div>
+      <div class="list-heading"><h2>Lista de respostas</h2><button id="export-button" class="secondary-button">Exportar CSV</button></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Nome</th><th>Resposta</th><th>Data do registro</th></tr></thead>
+          <tbody id="rsvp-rows"><tr><td colspan="3">Carregando...</td></tr></tbody>
+        </table>
+      </div>
+      <p class="admin-footnote">Mantenha esta página privada. O acesso aos dados é controlado pelas regras do Firestore.</p>
+    </section>
+    <div id="dashboard-message" class="message" role="status" aria-live="polite"></div>
+  </main>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
