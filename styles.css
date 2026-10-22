@@ -482,3 +482,35 @@ footer span { color: var(--accent); padding-left: 5px; }
     text-shadow: none;
   }
 }
+/* ===== BRILHO NOS NOMES DOS ANIVERSARIANTES ===== */
+
+@keyframes brilho-nomes-brasa {
+  0%, 100% {
+    text-shadow:
+      0 0 3px rgba(244, 81, 30, 0.10),
+      0 0 8px rgba(244, 81, 30, 0.08);
+  }
+
+  50% {
+    text-shadow:
+      0 0 6px rgba(244, 81, 30, 0.45),
+      0 0 18px rgba(244, 81, 30, 0.25);
+  }
+}
+
+.names {
+  animation: brilho-nomes-brasa 3s ease-in-out infinite;
+}
+
+.names span {
+  color: var(--accent);
+  display: inline-block;
+  animation: brilho-nomes-brasa 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .names,
+  .names span {
+    animation: none;
+  }
+}
