@@ -300,3 +300,74 @@ footer span { color: var(--accent); padding-left: 5px; }
     line-height: 1.9 !important;
   }
 }
+/* ===== CONTAGEM REGRESSIVA: BRASA E MAR ===== */
+.countdown-section {
+  margin: 36px 0;
+  padding: 26px 18px;
+  text-align: center;
+  color: var(--ink);
+  background: linear-gradient(145deg, #102b42, #07192b);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .16);
+}
+
+.countdown-section .eyebrow {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.countdown-section h2 {
+  margin: 0 0 22px;
+  color: var(--ink);
+  font-family: Georgia, serif;
+  font-size: clamp(23px, 6vw, 32px);
+  line-height: 1.3;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.countdown-item {
+  padding: 15px 4px;
+  background: rgba(244, 81, 30, .09);
+  border: 1px solid rgba(244, 81, 30, .55);
+  border-radius: 12px;
+  min-width: 0;
+}
+
+.countdown-item span {
+  display: block;
+  color: #fff1dc;
+  font-size: clamp(23px, 6vw, 34px);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-item small {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+@media (max-width: 380px) {
+  .countdown-section {
+    padding: 22px 12px;
+  }
+
+  .countdown-grid {
+    gap: 5px;
+  }
+
+  .countdown-item {
+    padding: 12px 2px;
+  }
+
+  .countdown-item small {
+    font-size: 10px;
+  }
+}
