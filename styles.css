@@ -734,3 +734,67 @@ footer span { color: var(--accent); padding-left: 5px; }
     opacity: 0.35;
   }
 }
+/* Correção: distribuir os ícones marinhos pela página */
+.ocean-decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ocean-decor .sea-icon {
+  position: absolute;
+  display: block;
+  width: 38px;
+  height: 38px;
+  opacity: 0.65;
+  color: #f4511e;
+}
+
+.ocean-decor .shell-left {
+  top: 520px;
+  left: 12px;
+}
+
+.ocean-decor .coral-right {
+  top: 950px;
+  right: 12px;
+}
+
+.ocean-decor .wave-left {
+  top: 1450px;
+  left: 12px;
+}
+
+.ocean-decor .sun-right {
+  top: 1900px;
+  right: 12px;
+}
+
+.ocean-decor .shell-right {
+  top: 2350px;
+  right: 12px;
+}
+
+@media (max-width: 600px) {
+  .ocean-decor .sea-icon {
+    width: 28px;
+    height: 28px;
+    opacity: 0.5;
+  }
+
+  .ocean-decor .shell-left,
+  .ocean-decor .wave-left {
+    left: 5px;
+  }
+
+  .ocean-decor .coral-right,
+  .ocean-decor .sun-right,
+  .ocean-decor .shell-right {
+    right: 5px;
+  }
+}
