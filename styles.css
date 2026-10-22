@@ -1,7 +1,13 @@
 * { box-sizing: border-box; }
 :root {
-  --paper: #f7f6f2; --white: #fffefa; --ink: #252722; --muted: #73766d;
-  --line: #e6e4dc; --accent: #65725d; --accent-dark: #4d5b46; --accent-pale: #e9ede5;
+  --paper: #06182b;
+  --white: #0b2238;
+  --ink: #f1d7b5;
+  --muted: #c5b7a3;
+  --line: #713a2b;
+  --accent: #f4511e;
+  --accent-dark: #ff6a35;
+  --accent-pale: #18334a;
 }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: "DM Sans", sans-serif; }
