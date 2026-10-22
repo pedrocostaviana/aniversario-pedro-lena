@@ -106,3 +106,101 @@ footer span { color: var(--accent); padding-left: 5px; }
   background: #f4511e !important;
   color: #06182b !important;
 }
+/* ===== NOVAS SEÇÕES: TEMA BRASA E MAR ===== */
+
+.extras-section {
+  margin: 28px auto;
+  color: var(--ink);
+}
+
+.extras-section .card-heading {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.extras-section .card-heading h2,
+.manual-card h2 {
+  color: var(--ink);
+  font-family: Georgia, serif;
+  font-size: clamp(25px, 4vw, 36px);
+  margin: 12px 0;
+}
+
+.extras-section .card-heading p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.extras-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.extras-buttons .primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 14px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.extras-buttons .primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(244, 81, 30, .22);
+}
+
+.manual-card {
+  padding: clamp(20px, 4vw, 32px);
+  background: linear-gradient(145deg, #102b42, #07192b);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .15);
+}
+
+.manual-card > .eyebrow {
+  color: var(--accent);
+  text-align: center;
+}
+
+.manual-card h2 {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.manual-item {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(241, 215, 181, .16);
+}
+
+.manual-item:last-child {
+  border-bottom: none;
+}
+
+.manual-item h3 {
+  color: var(--ink);
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+
+.manual-item p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .extras-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .manual-card {
+    padding: 20px 16px;
+  }
+}
