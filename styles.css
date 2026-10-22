@@ -59,34 +59,24 @@ footer span { color: var(--accent); padding-left: 5px; }
   .detail { padding: 17px; }
   .top-label { font-size: 9px; letter-spacing: .15em; }
 }
-.detail-label,
-.detail-sub {
-  color: #d9b995;
+/* Corrige a leitura dos cartões de data e local */
+.event-details .detail {
+  background: #102b42 !important;
+  border: 1px solid #f4511e !important;
+  color: #f1d7b5 !important;
 }
 
-.detail-value {
-  color: #fff1dc;
+.event-details .detail-label,
+.event-details .detail-sub {
+  color: #e5c9a5 !important;
 }
 
-.rsvp-card {
-  background: #102b42;
-  color: #f1d7b5;
+.event-details .detail-value {
+  color: #fff1dc !important;
+  font-weight: 700;
 }
 
-.rsvp-card label,
-.rsvp-card p,
-.rsvp-card .intro {
-  color: #f1d7b5;
-}
-
-input,
-select,
-textarea {
-  background: #fffaf2;
-  color: #172536;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #62584e;
+.event-details .detail-icon {
+  background: #f4511e !important;
+  color: #06182b !important;
 }
